@@ -10,33 +10,43 @@ body {
     border-radius: 5px;
     border: 1px black;
     position: relative;
-    &:before {
-      content: "\2660";
-      top: 20px;
-      left: 20px;
-      font-size: 80px;
-    }
-    &:after {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 80px;
-    }
-    &.spades:before,
-    &.spade:after {
-      content: "\2660";
-    }
-    &.club:before,
-    &.club:after {
-      content: "\2663";
-    }
-    &.heart:before,
-    &.heart:after {
-      content: "\2665";
-    }
-    &.diamonds:before,
-    &.diamonds:after {
-      content: "\2666";
-    }
   }
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  width: 600px;
+  height: 200px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 70px;
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top-left,
+.bottom-right {
+  position: absolute;
+  font-size: 75px;
+}
+
+.top-left {
+  top: 0px;
+  left: 10px;
+}
+
+.bottom-right {
+  bottom: 0px;
+  right: 10px;
+  transform: rotate(180deg);
 }

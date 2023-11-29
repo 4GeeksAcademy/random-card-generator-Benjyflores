@@ -1,13 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Poker Card Generator</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="card"></div>
+    <div class="card" id="randomCard">
+      <div class="top-left" id="topLeft"></div>
+      <div id="middle"></div>
+      <div class="bottom-right" id="bottomRight"></div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const suits = ["♠", "♣", "♥", "♦"];
+        const ranks = [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "J",
+          "Q",
+          "K",
+          "A"
+        ];
+
+        function getRandomElement(array) {
+          return array[Math.floor(Math.random() * array.length)];
+        }
+
+        const randomSuit = getRandomElement(suits);
+        const randomRank = getRandomElement(ranks);
+
+        const topLeftElement = document.getElementById("topLeft");
+        const middleElement = document.getElementById("middle");
+        const bottomRightElement = document.getElementById("bottomRight");
+
+        topLeftElement.textContent = randomSuit;
+        middleElement.textContent = randomRank;
+        bottomRightElement.textContent = randomSuit;
+      });
+    </script>
   </body>
 </html>
