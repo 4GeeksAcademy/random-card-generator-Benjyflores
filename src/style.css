@@ -14,8 +14,8 @@ body {
 }
 body {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   height: 100vh;
   margin: 0;
 }
