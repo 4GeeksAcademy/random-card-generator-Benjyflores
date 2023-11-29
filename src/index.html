@@ -11,9 +11,10 @@
       <div id="middle"></div>
       <div class="bottom-right" id="bottomRight"></div>
     </div>
+    <button onclick="generateRandomCard()">Scroll Cards</button>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      function generateRandomCard() {
         const suits = ["♠", "♣", "♥", "♦"];
         const ranks = [
           "2",
@@ -45,7 +46,7 @@
         topLeftElement.textContent = randomSuit;
         middleElement.textContent = randomRank;
         bottomRightElement.textContent = randomSuit;
-      });
+      }
     </script>
   </body>
 </html>
