@@ -62,3 +62,6 @@ button {
   padding: 10px;
   cursor: pointer;
 }
+.red {
+  color: red;
+}

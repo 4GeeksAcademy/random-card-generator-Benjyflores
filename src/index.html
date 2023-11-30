@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Poker Card Generator</title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <div class="card" id="randomCard">
@@ -46,6 +51,19 @@
         topLeftElement.textContent = randomSuit;
         middleElement.textContent = randomRank;
         bottomRightElement.textContent = randomSuit;
+        topLeftElement.textContent = randomSuit;
+        middleElement.textContent = randomRank;
+
+        if (randomSuit === "♥") {
+          bottomRightElement.classList.add("red");
+        } else {
+          bottomRightElement.classList.remove("red");
+        }
+        if (randomSuit === "♥") {
+          topLeftElement.classList.add("red");
+        } else {
+          topLeftElement.classList.remove("red");
+        }
       }
     </script>
   </body>
