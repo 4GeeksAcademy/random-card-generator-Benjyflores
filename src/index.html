@@ -54,16 +54,15 @@
         topLeftElement.textContent = randomSuit;
         middleElement.textContent = randomRank;
 
-        if (randomSuit === "♥") {
-          bottomRightElement.classList.add("red");
-        } else {
-          bottomRightElement.classList.remove("red");
-        }
-        if (randomSuit === "♥") {
-          topLeftElement.classList.add("red");
-        } else {
-          topLeftElement.classList.remove("red");
-        }
+        topLeftElement.classList.toggle(
+          "red",
+          randomSuit === "♥" || randomSuit === "♦"
+        );
+        bottomRightElement.classList.toggle(
+          "red",
+          randomSuit === "♥" || randomSuit === "♦"
+        );
+
         setInterval(generateRandomCard, 10000);
       }
     </script>
